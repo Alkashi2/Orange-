@@ -1,6 +1,8 @@
 name: app
-type: 'docker-image'
+
+type: docker-image
+
 web:
-  locations:
-    "/":
-      passthru: true
+  upstream:
+    socket_family: tcp
+    protocol: http

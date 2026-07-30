@@ -1,0 +1,6 @@
+name: app
+type: 'docker-image'
+web:
+  locations:
+    "/":
+      passthru: true

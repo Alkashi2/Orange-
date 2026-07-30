@@ -1,8 +1,0 @@
-name: app
-
-type: docker-image
-
-web:
-  upstream:
-    socket_family: tcp
-    protocol: http

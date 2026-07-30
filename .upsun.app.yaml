@@ -3,7 +3,6 @@ type: "python:3.11"
 hooks:
   build: |
     apt-get update && apt-get install -y nginx
-    mkdir -p /app/sockets
 web:
   commands:
     start: |
@@ -12,7 +11,3 @@ web:
   locations:
     "/":
       passthru: true
-      allow: true
-  upstream:
-    socket_family: "tcp"
-    protocol: "http"
